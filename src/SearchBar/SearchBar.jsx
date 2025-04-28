@@ -1,21 +1,26 @@
 import toast, { Toaster } from "react-hot-toast";
+import s from "./SearchBar.module.css"
 
-export default function SearchBar({ setSearchTerm }) {
+export default function SearchBar({ handleSearch }) {
+
+  const toastStyle = {
+    position: "top-right",
+    style: {
+      border: "1px solid #713200",
+      padding: "13px",
+      color: "#713200",
+      
+    },
+  }
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (e.target.elements.term.value === "") {
-      return toast("Enter text to search for images", {
-        position: "top-right",
-
-        style: {
-          border: "1px solid #713200",
-          padding: "13px",
-          color: "#713200",
-          
-        },
-      });
+      return toast("Enter text to search for images",toastStyle);
     }
-    setSearchTerm(e.target.elements.term.value);
+    handleSearch(e.target.elements.term.value);
+
   };
   return (
     <header>

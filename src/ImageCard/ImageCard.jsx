@@ -1,8 +1,9 @@
-export default function ImageCard({picture}) {
+export default function ImageCard({picture, big = false}) {
   return (
     <div>
  
-      <img src={picture.urls.small} alt={picture.alt_description} />
+      <img src={big ? picture.urls.regular : picture.urls.small} alt={picture.alt_description} />
+     
     </div>
   );
 }

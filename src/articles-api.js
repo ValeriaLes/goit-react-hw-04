@@ -9,7 +9,7 @@ export const fetchPicturesWithTopic = async (query, page, signal) => {
             client_id: 'cyLhS4aQitrOk1hvF-p3j71AV8QamM2otdy5EkkHmyA',
             query: query,
             page: page,
-            per_page: 15,
+            per_page: 14,
             signal: signal
         }
 

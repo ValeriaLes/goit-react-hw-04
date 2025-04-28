@@ -1,0 +1,12 @@
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.loadMoreBtn {
+    font-size: 18px;
+    padding: 10px;
+}
