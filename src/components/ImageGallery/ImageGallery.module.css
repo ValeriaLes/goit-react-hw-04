@@ -1,0 +1,20 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.listItem {
+  cursor:pointer;
+  transition: transform 0.2s ease-in-out;
+
+}
+
+.listItem:hover {
+  transform: scale(1.05);
+}
+

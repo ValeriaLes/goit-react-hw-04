@@ -1,0 +1,29 @@
+header {
+  padding: 20px;
+  background-color: #c88fc4;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.searchField {
+  padding: 8px;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.submitBtn {
+  background-color: #deafe8;
+  padding: 6px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}

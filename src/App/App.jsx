@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { fetchPicturesWithTopic } from "../articles-api";
+import { fetchPicturesWithTopic } from "../../articles-api";
 
-import ImageGallery from "../ImageGallery/ImageGallery";
+
+import ImageGallery from "../ImageGallery/ImageGallery"
 import SearchBar from "../SearchBar/SearchBar";
 import Loader from "../Loader/Loader";
 import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
@@ -46,15 +47,21 @@ function App() {
     };
   }, [searchTerm, page]);
 
+
+
   const handleLoadMoreBtn = () => {
     setPage(page + 1);
   };
+
+
 
   const handleSearchTerm = (termValue) => {
     setSearchTerm(termValue);
     setPictures([]);
     setPage(1);
   };
+
+
 
   function openModal(modalPictureId) {
     setIsOpen(true);
@@ -64,21 +71,22 @@ function App() {
     setModalPicture(bigPicture);
   }
 
+
+
   function closeModal() {
     setIsOpen(false);
   }
+
+
 
   return (
     <>
       <SearchBar handleSearch={handleSearchTerm} />
       {pictures.length > 0 && (
-        <ImageGallery
-          pictures={pictures}
-          openModal={openModal}
-          
-        />
+        <ImageGallery pictures={pictures} openModal={openModal} />
       )}
       {isLoading && <Loader />}
+
       {error && <ErrorMessage />}
       {pictures.length > 0 && totalPages > page && (
         <LoadMoreBtn handleBtn={handleLoadMoreBtn} />

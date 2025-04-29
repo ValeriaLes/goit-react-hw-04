@@ -1,0 +1,37 @@
+.smallPicture {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  object-position: top;
+}
+
+.bigPicture {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+}
+
+.imgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.likes {
+  position: absolute;
+  color: #3c2222;
+  font-size: 21px;
+  top: 3%;
+  right: 10%;
+  font-weight: bold;
+  text-shadow: 0.3px 0.3px black;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
