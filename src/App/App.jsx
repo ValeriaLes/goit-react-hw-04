@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
-import { fetchPicturesWithTopic } from "../../articles-api";
+import { fetchPicturesWithTopic } from "../articles-api";
 
 
-import ImageGallery from "../ImageGallery/ImageGallery"
-import SearchBar from "../SearchBar/SearchBar";
-import Loader from "../Loader/Loader";
-import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
-import ErrorMessage from "../ErrorMessage/ErrorMessage";
-import ImageModal from "../ImageModal/ImageModal";
+
+
+
+import ImageGallery from "../components/ImageGallery/ImageGallery"
+import SearchBar from "../components/SearchBar/SearchBar";
+import Loader from "../components/Loader/Loader";
+import LoadMoreBtn from "../components/LoadMoreBtn/LoadMoreBtn";
+import ErrorMessage from "../components/ErrorMessage/ErrorMessage";
+import ImageModal from "../components/ImageModal/ImageModal";
 
 function App() {
   const [pictures, setPictures] = useState([]);
@@ -85,6 +88,7 @@ function App() {
       {pictures.length > 0 && (
         <ImageGallery pictures={pictures} openModal={openModal} />
       )}
+     
       {isLoading && <Loader />}
 
       {error && <ErrorMessage />}
